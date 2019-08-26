@@ -1,0 +1,16 @@
+Package: ODproNIm
+Title: Outlier Delesion by Using Product NA and Imputation Chain
+Version: 0.1.0
+Authors@R: person("Koji", "Toda", email="toda@fit.ac.jp",role=c("aut","cre"))
+Maintainer: The package maintainer <toda@fit.ac.jp>
+Description: Outlier Delesion by Using Product NA and Imputation Chain in R. It combines
+    prodNA by missForest and Multiple Imputation Technizues (Mice and missForest in this 
+    version) to delete outlier cases. See help text(TBD) to know more information and 
+    procedure of outlier deletion.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    mice,
+    missForest
+RoxygenNote: 6.1.1
