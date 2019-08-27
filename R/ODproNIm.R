@@ -4,9 +4,11 @@
 #' @param imp imputation method name (mice (default) or missForest)
 #' @param missing_ratio ratio to product NA
 #' @param cut_off_ratio ratio of delete cases in whole data
-#' @param iter times of iteration
+#' @param iter the number of of iteration
+#' @param calc_res calculation method of residual
 #'
 #' @importFrom mice mice
+#' @importFrom mice complete
 #' @importFrom missForest missForest
 #' @importFrom missForest prodNA
 #'
@@ -14,9 +16,8 @@
 #' ODproNIm(iris[,-ncol(iris)],iter=10)
 #'
 #' @export
-#'
 
-ODproNIm<-function(data.df, imp="mice",missing_ratio=0.1 ,cut_off_ratio=0.2, iter=1000, diff_method="abs"){
+ODproNIm<-function(data.df, imp="mice",missing_ratio=0.1 ,cut_off_ratio=0.2, iter=1000, calc_res="arm"){
   for(i in 1:iter){
     missing.df<-missForest::prodNA(data.df,noNA=missing_ratio)
     if(imp=="mice"){
@@ -25,7 +26,7 @@ ODproNIm<-function(data.df, imp="mice",missing_ratio=0.1 ,cut_off_ratio=0.2, ite
     }else if(imp=="missForst"){
       imp.df<-missForest::missForest(missing.df)$ximp
     }
-    if(diff_method=="arm"){#absolute residual mean
+    if(calc_res=="arm"){#absolute residual mean
       if(!exists("diff_sum.df")){
         diff_sum.df<-abs(data.df-imp.df)
         missing_count.df<-is.na(missing.df)
@@ -33,7 +34,7 @@ ODproNIm<-function(data.df, imp="mice",missing_ratio=0.1 ,cut_off_ratio=0.2, ite
         diff_sum.df<-diff_sum.df+abs(data.df-imp.df)
         missing_count.df<-missing_count.df+is.na(missing.df)
       }
-    }else if(diff_method=="rms"){#residual mean square
+    }else if(calc_res=="rms"){#residual mean square
       if(!exists("diff_sum.df")){
         diff_sum.df<-(data.df-imp.df)^2
         missing_count.df<-is.na(missing.df)

@@ -5,7 +5,7 @@
 \title{Delete outlier cases}
 \usage{
 ODproNIm(data.df, imp = "mice", missing_ratio = 0.1,
-  cut_off_ratio = 0.2, iter = 1000)
+  cut_off_ratio = 0.2, iter = 1000, calc_res = "arm")
 }
 \arguments{
 \item{data.df}{target dataset}
@@ -16,7 +16,9 @@ ODproNIm(data.df, imp = "mice", missing_ratio = 0.1,
 
 \item{cut_off_ratio}{ratio of delete cases in whole data}
 
-\item{iter}{times of iteration}
+\item{iter}{the number of of iteration}
+
+\item{calc_res}{calculation method of residual}
 }
 \description{
 Delete outlier cases
