@@ -10,7 +10,7 @@ Description: Outlier Delesion by Using Product NA and Imputation Chain in R. It 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: 
+Imports:
     mice,
     missForest
 RoxygenNote: 6.1.1
