@@ -2,7 +2,7 @@
 % Please edit documentation in R/OEprNIm.R
 \name{OEprNIm}
 \alias{OEprNIm}
-\title{Eliminate outlier cases}
+\title{Eliminate outlier cases by using generating NA and imputation chain.}
 \usage{
 OEprNIm(data.df, imp = "mice", na_ratio = 0.1, co_ratio = 0.2,
   iter = 1000, calc_res = "arm")
@@ -10,11 +10,11 @@ OEprNIm(data.df, imp = "mice", na_ratio = 0.1, co_ratio = 0.2,
 \arguments{
 \item{data.df}{target dataset}
 
-\item{imp}{imputation method name (mice (default) or missForest)}
+\item{imp}{imputation method name ('mice' (default setting) or 'missForest')}
 
-\item{na_ratio}{ratio of producting NA}
+\item{na_ratio}{ratio of generating NA}
 
-\item{co_ratio}{ratio of eliminated cases from whole data}
+\item{co_ratio}{ratio of eliminated cases by whole data}
 
 \item{iter}{the number of of iteration}
 
@@ -24,7 +24,7 @@ OEprNIm(data.df, imp = "mice", na_ratio = 0.1, co_ratio = 0.2,
 $elim returns eliminated dataframe, $diff returns difference of each field and $mcont returns the number of missing count of each field
 }
 \description{
-Eliminate outlier cases
+Eliminate outlier cases by using generating NA and imputation chain.
 }
 \examples{
 OEprNIm(iris[,-ncol(iris)],iter=10)

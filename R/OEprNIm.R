@@ -1,9 +1,9 @@
-#' Eliminate outlier cases
+#' Eliminate outlier cases by using generating NA and imputation chain.
 #'
 #' @param data.df target dataset
-#' @param imp imputation method name (mice (default) or missForest)
-#' @param na_ratio ratio of producting NA
-#' @param co_ratio ratio of eliminated cases from whole data
+#' @param imp imputation method name ('mice' (default setting) or 'missForest')
+#' @param na_ratio ratio of generating NA
+#' @param co_ratio ratio of eliminated cases by whole data
 #' @param iter the number of of iteration
 #' @param calc_res calculation method of residual
 #'
