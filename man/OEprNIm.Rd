@@ -14,11 +14,14 @@ OEprNIm(data.df, imp = "mice", na_ratio = 0.1, co_ratio = 0.2,
 
 \item{na_ratio}{ratio of producting NA}
 
-\item{co_ratio}{ratio of delete cases in whole data}
+\item{co_ratio}{ratio of eliminated cases from whole data}
 
 \item{iter}{the number of of iteration}
 
 \item{calc_res}{calculation method of residual}
+}
+\value{
+$elim returns eliminated dataframe, $diff returns difference of each field and $mcont returns the number of missing count of each field
 }
 \description{
 Eliminate outlier cases

@@ -8,6 +8,7 @@ Description: Outlier Delesion by Using Product NA and Imputation Chain in R. It 
     version) to delete outlier cases. See help text(TBD) to know more information and 
     procedure of outlier deletion.
     In this version, dataset must be constructed by ONLY numeric veriables.
+    This package return
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
