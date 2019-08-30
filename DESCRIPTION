@@ -1,6 +1,6 @@
-Package: ODproNIm
-Title: Outlier Delesion by Using Product NA and Imputation Chain
-Version: 0.1.0
+Package: OEprNIm
+Title: Outlier Elimination by Using Product NA and Imputation Chain
+Version: 0.1.2
 Authors@R: person("Koji", "Toda", email="toda@fit.ac.jp",role=c("aut","cre"))
 Maintainer: The package maintainer <toda@fit.ac.jp>
 Description: Outlier Delesion by Using Product NA and Imputation Chain in R. It combines
