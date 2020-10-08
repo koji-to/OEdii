@@ -1,11 +1,11 @@
-Package: OEprNIm
-Title: Outlier Elimination by Using Product NA and Imputation Chain
+Package: OEdic
+Title: Outlier Elimination Technique Using Deletion - Imputation Chain
 Version: 0.1.2
 Authors@R: person("Koji", "Toda", email="toda@fit.ac.jp",role=c("aut","cre"))
 Maintainer: The package maintainer <toda@fit.ac.jp>
-Description: Outlier Elimination by Using Generating NA and Imputation Chain in R. It combines
-    prodNA by missForest and Multiple Imputation Techniques (Mice and missForest in this 
-    version) to delete outlier cases. See help text(TBD) to know more information and 
+Description: Outlier elimination using deletion-imputation chain in R. It combines
+    prodNA (by missForest package) and Multiple Imputation Techniques (Mice and missForest in this 
+    version) to delete outlier cases. See help text (TBD) to know more information and 
     procedure of outlier deletion.
     In this version, dataset must be constructed by ONLY numeric veriables.
 License: MIT + file LICENSE
