@@ -32,9 +32,13 @@ out$elim
 OEdic(data.df, imp="mice", del_rate=0.1, elim_rate=0.2, iter=1000, penl="SQD")
 ```
 data.df: outlier elimination target dataset
+
 imp: imputation method's name ('mice' (default setting) or 'missForest')
+
 del_rate: deletion rate to complete dataset
+
 elim_rate: outlier elimination rate
+
 iter: the number of of iteration
+
 penl: calculation method of residual(ABD: Absolute difference, SQD: Squared difference)
-```
