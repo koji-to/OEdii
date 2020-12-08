@@ -50,7 +50,7 @@ OEdic(
 
 `penl` calculation method of residual ('SQD': Squared difference (default setting) or 'ABD': Absolute difference)
 
-# Values
+## Values
 `$elim` returns dataframe without outlier (eliminated)
 
 `$diff` returns means of difference between imputed value and actual one about each field
