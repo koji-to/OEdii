@@ -6,7 +6,7 @@
 ## Overview
 **OEdic**: Outlier Elimination Technique Using Deletion - Imputation Chain
 
-OEdic is R poackage and outlier elimination technique using deletion-imputation chain.
+OEdic is R package and outlier elimination technique using deletion-imputation chain.
 
 It combines prodNA (by missForest package) and Multiple Imputation Techniques (Mice and missForest in this version) to delete outlier cases.
 
