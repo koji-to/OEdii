@@ -35,19 +35,23 @@ OEdic<-function(data.df, imp="mice", del_rate=0.1, elim_rate=0.2, iter=1000, pen
       imp.df<-missForest::missForest(missing.df)$ximp
     }
     if(penl=="ABD"){
+      diff_sum_temp.df<-abs(data.df-imp.df)
+      diff_sum_temp.df[is.na(diff_sum_temp.df)]<-0
       if(!exists("diff_sum.df")){#absolute difference
-        diff_sum.df<-abs(data.df-imp.df)
+        diff_sum.df<-diff_sum_temp.df
         missing_count.df<-is.na(missing.df)
       }else{
-        diff_sum.df<-diff_sum.df+abs(data.df-imp.df)
+        diff_sum.df<-diff_sum.df+diff_sum_temp.df
         missing_count.df<-missing_count.df+is.na(missing.df)
       }
     }else if(penl=="SQD"){#squared difference
+      diff_sum_temp.df<-(data.df-imp.df)^2
+      diff_sum_temp.df[is.na(diff_sum_temp.df)]<-0
       if(!exists("diff_sum.df")){
-        diff_sum.df<-(data.df-imp.df)^2
+        diff_sum.df<-diff_sum_temp.df
         missing_count.df<-is.na(missing.df)
       }else{
-        diff_sum.df<-diff_sum.df+abs(data.df-imp.df)^2
+        diff_sum.df<-diff_sum.df+diff_sum_temp.df
         missing_count.df<-missing_count.df+is.na(missing.df)
       }
     }
