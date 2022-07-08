@@ -1,12 +1,12 @@
 
-# OEdic
+# OEdii
 
 <!-- badges: start -->
 <!-- badges: end -->
 ## Overview
-**OEdic**: Outlier Elimination Technique Using Deletion - Imputation Chain
+**OEdii**: Outlier Elimination Technique Using Deletion - Imputation Iteration
 
-OEdic is R package and outlier elimination technique using deletion-imputation chain.
+OEdii is R package and outlier elimination technique using deletion-imputation iteration.
 
 It combines prodNA (by missForest package) and Multiple Imputation Techniques (Mice and missForest in this version) to delete outlier cases.
 
@@ -16,7 +16,7 @@ In this version, dataset must be constructed by ONLY numeric veriables.
 ## Installation
 
 ``` r
-devtools::install_github("koji-to/OEdic")
+devtools::install_github("koji-to/OEdii")
 ```
 
 ## Dependencies
@@ -27,7 +27,7 @@ devtools::install_github("koji-to/OEdic")
 ## Usage
 
 ```
-OEdic(
+OEdii(
   data.df,
   imp = "mice",
   del_rate = 0.1,
@@ -60,8 +60,8 @@ OEdic(
 ## Example
 
 ``` r
-library(OEdic)
-OEdic(iris[,-ncol(iris)], iter=10)
-out <- OEdic(iris[,-ncol(iris)],iter=10)
+library(OEdii)
+OEdic(iris[,-ncol(iris)], iter=100)
+out <- OEdic(iris[,-ncol(iris)],iter=100)
 out$elim
 ```
