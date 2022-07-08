@@ -1,4 +1,4 @@
-#' Eliminate outliers using deletion-imputation chain.
+#' Eliminate outliers using deletion-imputation Iteration.
 #'
 #' @param data.df outlier elimination target dataset
 #' @param imp imputation method's name ('mice' (default setting) or 'missForest')
@@ -13,8 +13,8 @@
 #' @importFrom missForest prodNA
 #'
 #' @examples
-#' OEdic(iris[,-ncol(iris)], iter=10)
-#' out <- OEdic(iris[,-ncol(iris)],iter=10)
+#' OEdii(iris[,-ncol(iris)], iter=100)
+#' out <- OEdii(iris[,-ncol(iris)],iter=100)
 #' out$elim
 #'
 #' @return $elim returns dataframe without outlier (eliminated)
@@ -23,9 +23,9 @@
 #' 
 #' $mcont returns the number of missing count of each field
 #'
-#' @export OEdic
+#' @export OEdii
 
-OEdic<-function(data.df, imp="mice", del_rate=0.1, elim_rate=0.2, iter=1000, penl="SQD"){
+OEdii<-function(data.df, imp="mice", del_rate=0.1, elim_rate=0.2, iter=1000, penl="SQD"){
   for(i in 1:iter){
     missing.df<-missForest::prodNA(data.df,noNA=del_rate)
     if(imp=="mice"){

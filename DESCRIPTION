@@ -1,9 +1,9 @@
-Package: OEdic
-Title: Outlier Elimination Technique Using Deletion - Imputation Chain
+Package: OEdii
+Title: Outlier Elimination Technique Using Deletion - Imputation Iteration
 Version: 0.1.2
 Authors@R: person("Koji", "Toda", email="toda@fit.ac.jp",role=c("aut","cre"))
 Maintainer: The package maintainer <toda@fit.ac.jp>
-Description: Outlier elimination using deletion-imputation chain in R. It combines
+Description: Outlier elimination using deletion-imputation iteration in R. It combines
     prodNA (by missForest package) and Multiple Imputation Techniques (Mice and missForest in this 
     version) to delete outlier cases. See help text (TBD) to know more information and 
     procedure of outlier deletion.
@@ -14,4 +14,4 @@ LazyData: true
 Imports:
     mice,
     missForest
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.0
