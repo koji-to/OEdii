@@ -61,7 +61,40 @@ OEdii(
 
 ``` r
 library(OEdii)
+
 OEdic(iris[,-ncol(iris)], iter=100)
 out <- OEdic(iris[,-ncol(iris)],iter=100)
 out$elim
 ```
+## Citation
+
+Early access version is [here](https://onlinelibrary.wiley.com/doi/abs/10.1002/tee.23889)
+<!-- Maybe Vol. 18, No. 9 -->
+
+@article{https://doi.org/10.1002/tee.23889,
+
+author = {Toda, Koji and Tsunoda, Masateru},
+
+title = {Outlier Elimination Technique Using Deletion-Imputation Iteration for Fault-Prone Module Detection},
+
+journal = {IEEJ Transactions on Electrical and Electronic Engineering},
+
+volume = {},
+
+number = {},
+
+pages = {},
+
+keywords = {outlier elimination, missing value imputation, fault-prone detection},
+
+doi = {https://doi.org/10.1002/tee.23889},
+
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/tee.23889},
+
+eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/tee.23889},
+
+abstract = {In software development, improving the efficiency of a testing process is important to ensure reliability during a limited development period. One approach to improving the testing process is identifying modules that are likely to contain faults (fault-prone modules) and allocate effort toward resolving them. For this purpose, many fault-prone module detection models have been proposed in previous studies. However, an appropriate fault-prone module detection model cannot be constructed if outliers, such as modules with a significantly large number of source code lines and branches, but no faults, are included. In this study, we propose a new outlier elimination technique that creates missing values (deleted values) to complete the data artificially and applies a missing value imputation technique using a regression approach. If the imputed value differs significantly from the actual (recorded) value, the proposed technique treats the values as outliers. We name the proposed technique Outlier Elimination Technique using Deletion-Imputation Iteration (OEdii), and its performance is verified experimentally. In general, our experimental results are more accurate than the previous outlier elimination techniques in the area under the ROC curve. © 2023 Institute of Electrical Engineers of Japan. Published by Wiley Periodicals LLC.}
+
+}
+
+
