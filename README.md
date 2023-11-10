@@ -68,9 +68,6 @@ out$elim
 ```
 ## Citation
 
-Early access version is [here](https://onlinelibrary.wiley.com/doi/abs/10.1002/tee.23889)
-<!-- Maybe Vol. 18, No. 9 -->
-
 @article{https://doi.org/10.1002/tee.23889,
 
 author = {Toda, Koji and Tsunoda, Masateru},
@@ -79,11 +76,11 @@ title = {Outlier Elimination Technique Using Deletion-Imputation Iteration for F
 
 journal = {IEEJ Transactions on Electrical and Electronic Engineering},
 
-volume = {},
+volume = {18},
 
-number = {},
+number = {10},
 
-pages = {},
+pages = {1653-1663},
 
 keywords = {outlier elimination, missing value imputation, fault-prone detection},
 
